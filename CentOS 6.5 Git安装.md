@@ -24,4 +24,5 @@
     > 如果输出版本号，说明安装成功
 
 
-    
+3. **mysql数据库配置**
+    > http://www.centoscn.com/mysql/2014/1211/4290.html
