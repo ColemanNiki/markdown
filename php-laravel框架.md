@@ -7,15 +7,14 @@
     可以通过这样的设定来调用吗？
 
 ### 框架逻辑   
-``` flow
-st=>start: Start
-op=>operation: Your Operation
-sub=>subroutine: My Subroutine
-cond=>condition: Yes or No?
-io=>inputoutput: catch something...
-e=>end: End
-
-st->op->cond
-cond(yes)->io->e
-cond(no)->sub(right)->op
+```mermaid
+graph TD
+    subgraph SVN Architecture
+    client1-->|read / write|SVN((SVN server))
+    client2-->|read only|SVN
+    client3-->|read / write|SVN
+    client4-->|read only|SVN
+    client5(...)-->SVN
+    SVN---|store the data|sharedrive
+    end
 ```
